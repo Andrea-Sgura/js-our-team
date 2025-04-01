@@ -40,7 +40,7 @@ const teamMembers = [
 // FUNZIONE CHE MI CREA LA SINGOLA CARD 
 const generateTeamCard = (member) => {
   const card = document.createElement("div");
-  // RESPONSIVE
+  // INSERIMENTO RESPONSIVE
   card.classList.add("col-12", "col-md-6", "col-lg-4", "mb-4");
 
   // COPIO L'HTML DELL'ELEMENTO DA GENERARE
@@ -52,8 +52,8 @@ const generateTeamCard = (member) => {
                     <p class="card-text"><small class="text-muted">${member.email}</small></p>
                 </div>
              </div>
-    `; 
-}
+    `;
+};
 
 // CICLO L'ARRAY
 for (let i=0; i<teamMembers.length; i++){
