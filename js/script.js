@@ -36,3 +36,15 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// FUNZIONE CHE MI CREA LA SINGOLA CARD 
+const generateTeamCard = (member) => {
+  console.log(member)
+}
+
+// CICLO L'ARRAY
+for (let i=0; i<teamMembers.length; i++){
+  generateTeamCard(teamMembers[i]);
+}
+
+generateTeamCard()
