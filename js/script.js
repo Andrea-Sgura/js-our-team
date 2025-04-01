@@ -53,6 +53,9 @@ const generateTeamCard = (member) => {
                 </div>
              </div>
     `;
+
+    // AGGIUNGO LA CARD AL CONTAINER 
+    document.getElementById("team-container").appendChild(card);
 };
 
 // CICLO L'ARRAY
