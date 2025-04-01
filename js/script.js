@@ -39,12 +39,23 @@ const teamMembers = [
 
 // FUNZIONE CHE MI CREA LA SINGOLA CARD 
 const generateTeamCard = (member) => {
-  console.log(member)
+  const card = document.createElement("div");
+  // RESPONSIVE
+  card.classList.add("col-12", "col-md-6", "col-lg-4", "mb-4");
+
+  // COPIO L'HTML DELL'ELEMENTO DA GENERARE
+  card.innerHTML = `<div class="card shadow d-flex flex-row align-items-center p-2">
+                <img src="${member.img}" class="team-img" alt="${member.name}">
+                <div class="card-body">
+                    <h5 class="card-title">${member.name}</h5>
+                    <p class="card-text">${member.role}</p>
+                    <p class="card-text"><small class="text-muted">${member.email}</small></p>
+                </div>
+             </div>
+    `; 
 }
 
 // CICLO L'ARRAY
 for (let i=0; i<teamMembers.length; i++){
   generateTeamCard(teamMembers[i]);
 }
-
-generateTeamCard()
